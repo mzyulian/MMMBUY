@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>慢慢买比价网--手机版</title>
+  <link rel="stylesheet" href="../css/base1.css">
+  <link rel="stylesheet" href="../css/getproduct.css">
+</head>
+<body>
+  <!-- 头部 -->
+  <header>
+    <a href="../index.html" class="logo">慢慢买比价网</a>
+    <a href="javascript:;" class="appDown"></a>
+  </header>
+  <!-- 搜索框 -->
+ <div class="seach">
+        <input type="text" placeholder="请输入你想比价的商品">
+    <span>搜索</span>
+ </div>
+ <div class="nav">
+    <a href="../index.html" class="f12">首页&gt; </a>
+     <a href="javascript:;" class="f12">平板电视</a> 
+    &gt; 单个商品
+</div>
+<div class="img" id="imgDiv">
+    <!-- <img onerror="this.src='http://misc.manmango.com/images/none.gif'" src="http://gfs17.gomein.net.cn/T1zCVvBmDj1RCvBVdK_160.jpg" alt="乐视(LeEco)LETV-2DS50air 50英寸 全高清 第三代魔音系统 8.9mm超窄边框 智能网络电视" width="200"> -->
+</div>
+<div style="text-align: left; line-height: 22px; margin-left: 6px;">
+    <span style="font-size: 16px; font-weight: bold; margin: 0px; padding: 0px;" id="nameSpan">
+        <!-- 乐视(LeEco)LETV-2DS50air 50英寸 全高清 第三代魔音系统 8.9mm超窄边框 智能网络电视</span> -->
+    <font style="color: #FF5600">
+        </font>
+</div>
+ <div style="margin: 18px 6px; text-align: left;">
+                  
+    <div style="background-color:#FF8000; height:36px; -moz-border-radius: 10px;-webkit-border-radius: 10px; border-radius: 10px;line-height:36px; text-align:center;">
+<a href="redirect.aspx?webid=8&amp;tourl=http://item.gome.com.cn/9134045634-1123040216.html&amp;bjid=187464937" target="_blank" style="color:#fff;display: block;">加入购物车</a>
+      </div>
+  </div> 
+
+   
+ <div class="price" >
+     <div><a>比价购买</a></div>
+     <div><a>产品参数</a></div>
+     <div><a>评价(2322)</a></div>
+ </div>
+<div class="store" id="priceDiv">
+    <!-- <div class="nice">
+   <a href="redirect.aspx?webid=8&amp;tourl=http://item.gome.com.cn/9134045634-1123040216.html&amp;bjid=187464937" class="f12sc"> 商城:国美【自营商品】</a>
+   </div>
+   <div class="history"  style=" text-align: left;">
+    历史最低:<span>￥2205.00</span>
+    <div class="searchbtn">
+        <input type="submit" value="去购买">
+     </div>
+   </div> -->
+</div>
+
+</div>
+<div class="line"></div>
+<div class="tip">
+  <p> *实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟</p> 
+</div>
+<!-- 网友评价 -->
+<div class="evaluate">
+    <div class="content">
+        <div class="title">
+            网友评价
+        </div>
+        <div id="commentDiv">
+            <!-- <div class="source">
+                <div class="post">zengmeimei</div>
+                <div class="time ">
+                    <p>2018/1/1</p>
+                    <P>购买自：京东</P>
+                </div>
+                
+            </div>
+            <div class="agree">不错，极好不错，极好不错，极好不错，极好不错，极好</div> -->
+        </div>
+        
+    </div>
+
+    
+</div>
+  <!-- 更多评价  -->
+  <div style="margin: 18px 6px; text-align: left;">
+                  
+    <div style="background-color:#dbdbdb; height:28px; -moz-border-radius: 10px;-webkit-border-radius: 10px; border-radius: 10px;line-height:28px; text-align:center;">
+<a href="redirect.aspx?webid=8&amp;tourl=http://item.gome.com.cn/9134045634-1123040216.html&amp;bjid=187464937" target="_blank" style="color:black;display: block;font-size:12px;border: 1px solid #c4c4c4;border-radius: 19px;">查看更多评价</a>
+      </div>
+  </div>
+  <!-- 底部 -->
+  <footer>
+    <div class="foot_tools">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="#"><span></span> 返回顶部</a>
+    </div>
+    <div class="foot_font">
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        <a href="javascript:;">慢慢买手机版</a>
+        -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+</body>
+<script src="../js/jquery.js"></script>
+<script>
+    
+var productImg; //商品图片
+var bjShop; // 商品比价购买店铺
+var productName;    // 商品名称
+var productid=location.search;
+$(function(){
+    init();
+    initComment(productid);
+});
+
+function init(){
+    $.ajax({
+				url : "http://193.112.55.79:9090/api/getproduct"+productid+"",
+				type: "get",
+                dataType: "json",
+                success : function(data) {
+                    console.log(data)
+                    productImg=data.result[0].productImg;
+                    bjShop=data.result[0].bjShop;
+                    productName=data.result[0].productName;
+                    document.getElementById('nameSpan').innerText=productName;
+                    $("#imgDiv").append(data.result[0].productImg);
+                    $("#priceDiv").append(data.result[0].bjShop);
+                }
+				});
+
+}
+
+function initComment(id){
+    $.ajax({
+				url : "http://193.112.55.79:9090/api/getproductcom"+productid+"",
+				type: "get",
+                dataType: "json",
+                success : function(data) {
+                    console.log("---")
+                    console.log(data)
+                    var result = data.result;
+                    for (var i = 0; i < result.length; i++) {
+                        var str ='<div class="source">'
+                        +'<div class="post">'+result[i].comName
+                        +'</div>'
+                        +'<div class="time ">'
+                        +'<p>'+result[i].comTime+''
+                        +'<P>'+result[i].comFrom+'</p>'
+                        +'</div>'
+                        +'</div>'
+                        +'<div class="agree">'+result[i].comContent
+                        +'</div>'
+                        +'<hr />';
+                        $("#commentDiv").append(str);
+                    }
+                   
+                }
+				});
+}
+</script>
+</html>

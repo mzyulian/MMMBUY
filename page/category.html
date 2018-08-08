@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/fonts/iconfont.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/category.css">
+    <title>慢慢买比价网--手机版</title>
+</head>
+<body>
+   <div class="view">
+       <!-- 头部 -->
+        <header class="clearfix">
+            <div class="logo fl">
+                <a href="../index.html">
+                    <img src="../images/header_logo.png" alt="">
+                </a>
+            </div>
+            <div class="appdowm fr">
+                <a href="javascript:;">
+                    <img src="../images/header_app.png" alt="">
+                </a>
+            </div>
+        </header>
+        <!-- 搜索框 -->
+        <form action="">
+                <div class="search">
+                    <div class="search_text">
+                         <input type="text" name="" id="" placeholder="请输入你想比价的商品">
+                    </div>
+                     <div class="search_btn">
+                         <input type="button" value="搜索">
+                    </div>
+               </div>
+        </form>
+        <!-- 商品分类 -->
+     
+           <div class="goods">
+                <div class="category">
+                        <ul id="categoryId">
+                            <!-- <li>
+                                <div class="category_title">
+                                    <span data-Id="">大家电</span>
+                                    <i class="iconfont">&#xe615;</i>
+                                </div>
+                                <div class="category_content">
+                                    <a href="javascript:;">平板电视</a>
+                                    <a href="javascript:;">空调</a>
+                                    <a href="javascript:;">家庭影院</a>
+                                    <a href="javascript:;">冰箱</a>
+                                    <a href="javascript:;">DIV播放器</a>
+                                    <a href="javascript:;">影响</a>
+                                    <a href="javascript:;">洗衣机</a>
+                                    <a href="javascript:;">热水器</a>
+                                    <a href="javascript:;">酒柜</a>
+                                    <a href="javascript:;">消毒柜</a>
+                                </div>
+                            </li> -->
+                        </ul>
+                </div>
+           </div>
+      
+        <!-- 底部工具栏 -->
+        <footer>
+            <div class="footlogin">
+                <a href="javascript:;">登陆</a>
+                <a href="javascript:;">注册</a>
+                <a href="#"><i class="iconfont">&#xe65a;</i>返回顶部</a>
+            </div>
+            <div class="footapp">
+                <p>
+                    <a href="javascript:;">手机app下载</a>
+                    <a href="javascript:;">慢慢买手机版</a>
+                    --掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+   </div>
+</body>
+<!-- <script src="./lib/jquery/jquery.js"></script> -->
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../js/category.js"></script>
+
+
+<!-- 模板 -->
+<script type="aa" id="temCategory">
+    {{each data value index}}
+         <li>
+                <div class="category_title" data-id="{{value.titleId}}">
+                    <span>{{value.title}}</span>
+                    <i class="iconfont">&#xe615;</i>
+                </div>
+                <div class="category_content" data-flag="true">
+               </div>
+        </li>
+      {{/each}}  
+</script>
+<script type="bb" id="second_category">
+    {{each data value index}}
+       <a href="./getProductList.html?categoryid={{value.categoryId}}">{{value.category}}</a>
+    {{/each}}
+</script>
+</html>

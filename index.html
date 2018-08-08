@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>慢慢买比价网--手机版</title>
+  <style>
+    .loadingGIF{
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <!-- 头部 -->
+  <header>
+    <a href="index.html" class="logo">慢慢买比价网</a>
+    <a href="javascript:;" class="appDown"></a>
+  </header>
+
+  <!-- 搜索框 -->
+  <div class="search">
+    <div class="sc_font">
+      <input type="text" placeholder="请输入你想比价的商品">
+    </div>
+    <div class="sc_btn">
+      <input type="submit" value="搜索">
+    </div>
+  </div>
+
+  <!-- 导航 -->
+  <nav>
+    <!-- 导航模板位置 -->
+  </nav>
+
+  <!-- 内容 -->
+  <div class="content">
+    <!-- 推荐 -->
+    <div class="ct_tuijian">
+      <div class="tj_title">
+        <span>超值折扣推荐</span>
+        <a href="javascript:;"><img src="./images/more.png" alt=""></a>
+      </div>
+      <div class="tj_center">
+        <ul class="list_Tmp">
+          <!-- 折扣商品列表的模板位置 -->
+        </ul>
+      </div>
+      <div class="tj_more"><a href="./page/moneyctrl.html">更多优惠信息 »</a></div>
+    </div>
+    <div class="ct_tuijian ct_paihang">
+      <div class="tj_title">
+        <span>品牌排行</span>
+        <a href="javascript:;"><img src="./images/more.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <footer>
+    <div class="foot_tools">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="#"><span></span> 返回顶部</a>
+    </div>
+    <div class="foot_font">
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        <a href="javascript:;">慢慢买手机版</a>
+        -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+</body>
+</html>
+<!-- 导航模板 -->
+<script type="text/template" id="navTmpl">
+  {{each res value}}
+    <a href="{{if value.indexmenuId !=7}}./page/{{value.titlehref}}{{else}}javascript:;{{/if}}">
+      {{@ value.img}}
+      <p>{{value.name}}</p>
+    </a>
+  {{/each}}
+</script>
+<script type="text/template" id="listTmpl">
+  {{each res val}}
+    <li>
+      <a href="./page/getmoneyctrlproduct.html?productid={{val.productId}}">
+        <div class="left">
+          {{if val.productImgLg == ""}}
+            {{@ val.productImgSm}}
+            {{else}}
+            {{@ val.productImgLg}}
+          {{/if}}
+        </div>
+        <div class="right">
+          <p>{{val.productName}}
+            <span>{{val.productPinkage}}</span>
+          </p>
+          <p>
+            <span>{{val.productFrom}} | {{val.productTime}}</span>
+            <span><i class="fa fa-commenting-o"></i>{{val.productComCount}}</span>
+          </p>
+        </div>
+      </a>
+    </li>
+  {{/each}}
+</script>
+<!-- 模板引擎 -->
+<script src="./lib/arttemplate/template-web.js"></script>
+<!-- zepto -->
+<script src="./lib/zepto/zepto.js"></script>
+<!-- index.js -->
+<script src="./js/index.js"></script>

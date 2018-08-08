@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>慢慢买比价网--手机版</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/getsetenav.css">
+  <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css">
+</head>
+<body>
+  <!-- header标签开始 -->
+  <header>
+    <i class="fa fa-angle-left fafa"></i>
+    <h4>商场导航</h4>
+    <a href="./moneyctrl.html" class="appDown"></a>
+  </header>
+<!-- header标签结束 -->
+
+<!-- 商标内容开始 -->
+
+    <ul class="brandmain-ul">
+      <!-- 占位 -->
+    </ul>
+
+
+  <!-- footer标签开始 -->
+  <footer>
+    <div class="foot_tools">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="#"><span></span> 返回顶部</a>
+    </div>
+    <div class="foot_font">
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        <a href="javascript:;">慢慢买手机版</a>
+        -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+  <!-- footer标签结束 -->
+</body>
+<script type="text/arttemplate" id="endmore">
+  {{each arr value index}}
+  <li>
+      <a href="{{ value.navHref }}">
+         <div><img src="{{ value.navImg }}" alt=""></div>
+         <span>{{ value.navTitle }}</span>
+      </a>  
+   </li>
+   {{/each}}
+</script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../js/getsetenav.js"></script>
+</html>

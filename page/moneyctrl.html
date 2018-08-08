@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>最新优惠 - 省钱控 - 慢慢买</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/moneyctrl.css">
+</head>
+
+<body>
+    <div class="view">
+        <!-- 头部 -->
+        <header id="header" class="header">
+            <div class="back">
+                <a class="icon-back" href="../index.html">&lt;</a>
+            </div>
+            <h1>
+                省钱控 - 最新优惠</h1>
+            <div class="home">
+                <a class="icon-app" href="javascript:;"></a>
+            </div>
+        </header>
+        <!-- 商品列表 -->
+        <div class="gools">
+            <div class="cu-list">
+                <ul>
+                    <!-- <li>
+                        <a href="javascript:;">
+                            <div class="pic">
+                                <img src="images/Thumb_1.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <div class="title">
+                                    网易严选 春风TryFun 小野喵飞机杯
+                                    <span>79元/价（2件8折后）</span>
+                                </div>
+                                <div class="other">
+                                    <span>网易严选 | 08-05 22:19</span>
+                                    <span class="comment">
+                                        <i class="icon-comment fa fa-commenting-o"></i>
+                                        15
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- 页数 -->
+            <div class="page">
+                <div class="pre">
+                    <a href="javascript:;">上一页</a>
+                </div>
+                    <select class="selectPage" name="" id="selectPage">
+                    </select>
+                <div class="next">
+                    <a href="javascript:;">下一页</a>
+                </div>
+            </div>
+            <!-- 首页菜单 -->
+            <div class="menu">
+                <a href="javascript:;">首页&lt;省钱控</a>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <footer class="footer">
+            <div class="foot_top">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="#header">
+                    <span></span> 返回顶部</a>
+            </div>
+            <div class="foot_bot">
+                <p>
+                    <a href="javascript:;">手机APP下载</a>
+                    <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台</p>
+                <p>m.manmanbuy.com </p>
+            </div>
+        </footer>
+        <!-- 固定窗口 -->
+        <div class="promotion_bar">
+            <a class="close" href="javascript:;"></a>
+            <div class="icon"></div>
+            <p>
+                <span>全网折扣实时更新</span>
+                <br>
+                <span>神价第一时间通知</span>
+            </p>
+            <a href="#" class="btn">立即打开</a>
+        </div>
+    </div>
+
+</body>
+<!-- 模板 -->
+<script type="text/template" id="tmpSelect">
+    <%for (var i=1;i<=data;i++){%>
+       <option value="<%=i%>"><%=i%>/<%= data %></option>
+    <%}%>
+  </script>  
+<!-- 模板 -->
+<script id="getTpl" type="text/html">
+    <!--商品列表  -->
+    {{each arr value index}}
+    <li>
+        <!-- <a href="./getmoneyctrlproduct.html?productid={{value.productId}}" > -->
+        <a href="./getmoneyctrlproduct.html?productid={{value.productId}}" >    
+            <div class="pic">
+                <!-- <img src="images/Thumb_1.jpg" alt=""> -->
+                {{@ value.productImg2}}
+            </div>
+            <div class="info">
+                <div class="title">
+                    {{value.productName}}
+                    <span>{{value.productPinkage}}</span>
+                </div>
+                <div class="other">
+                    <span>{{value.productFrom}} | {{value.productTime}}</span>
+                    <span class="comment">
+                        <i class="icon-comment fa fa-commenting-o"></i>
+                        {{value.productComCount}}
+                    </span>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<!-- 模板 -->
+
+<!-- 模板引擎 -->
+<script src="../lib/arttemplate/template-web.js"></script>
+<!-- zepto -->
+<script src="../lib/zepto/zepto.js"></script>
+<!-- moneyctrl -->
+<script src="../js/moneyctrl.js"></script>
+
+</html>

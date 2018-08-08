@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- 换成理想视口 可享受谷歌优惠套餐哟 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/gsproduct.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-1 al">
+                    <a href="../index.html" class="glyphicon glyphicon-menu-left"></a>
+                </div>
+                <div class="col-xs-9 title">
+                    <h1>凑单品</h1>
+                </div>
+                <div class="col-xs-2 ar">
+                    <a href="javascript:;">
+                        <img src="../images/header_app.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 商品内容  大盒子 -->
+    <div class="list">
+        <!-- 筛选功能 -->
+        <div class="screen">
+            <!-- 店铺 -->
+            <div class="find">
+                <ul class="clearfix">
+                    <li class="jd">
+                        <a  href="javascript:;">京东</a>
+                        <span class="glyphicon glyphicon-triangle-bottom"></span>
+                    </li>
+                    <li class="dy">
+                        <a href="javascript:;">华北</a>
+                        <span class="glyphicon glyphicon-triangle-bottom"></span>
+                    </l>
+                    <li >
+                        <a href="javascript:;">一元</a>
+                        <span class="glyphicon glyphicon-triangle-bottom"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="screen2">
+                <span class="glyphicon glyphicon-th-list"></span>
+            </div>
+            <!-- 获取到数据 这里要向后台发送请求了 -->
+            <!-- 获取到商品店铺信息 -->
+            <div class="getShop xl">
+                <ul>
+
+                </ul>
+            </div>
+            <!-- 获取到地区信息 -->
+            <div class="getArea xl">
+                <ul>
+
+                </ul>
+            </div>
+            <!-- 获取到全部价位 -->
+            <div class="getpic xl">
+                    <ul>
+                            <li>
+                                <a href="javascript:;">全部价格</a>
+                            </li>
+                        </ul>
+            </div>
+        </div>
+
+        <!-- 商品占位 -->
+        <div class="goods clearfix">
+            <ul class="clearfix">
+
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="../lib/bootstrap/jquery.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../js/gsproduct.js"></script>
+</html>
+<script type="text/template" id="shopList">
+    {{each data value}}
+    <li>
+        <a href="javascript:;" data-shopId="{{value.shopId}}">
+            {{value.shopName}}
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script type="text/template" id="areaList">
+    {{each data value}}
+    <li>
+        <a href="javascript:;" data-areaId="{{value.areaId}}">
+            {{value.areaName}}
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script type="text/template" id="goodsList">
+    {{each data value}}
+    <li>
+        <a href="javascript:;">
+            <div class="img1">
+                <img src="{{value.productImg}}" alt="">
+            </div>
+            <div class="title">
+                    {{value.productName}}
+            </div>
+            <div class="pic clearfix">
+                <div class="price">{{value.productPrice}}</div>
+                <div class="go">去凑单</div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>

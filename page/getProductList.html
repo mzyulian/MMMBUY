@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>国内折扣详情</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/getProductList.css">
+</head>
+<body>
+  <!-- 头部 -->
+  <header>
+    <a href="../index.html" class="logo">慢慢买比价网</a>
+    <a href="javascript:;" class="appDown"></a>
+  </header>
+
+    <!-- 搜索框 -->
+  <div class="search">
+    <div class="sc_font">
+      <input type="text" placeholder="请输入你想比价的商品">
+    </div>
+    <div class="sc_btn">
+      <input type="submit" value="搜索">
+    </div>
+  </div>
+
+   <!-- 内容 -->
+  <div class="content">
+    <!-- 推荐 -->
+    <div class="ct_fenlei">
+      <div class="fl_title">
+        <div class="tt_left">
+          <a href="../index.html">首页 ></a>
+          <a href="./category.html">全部分类 ></a>
+          <a href="#"><span id="cateGoryName"></span> ></a>
+        </div>
+        <a href="javascript:;">筛选</a>
+      </div>
+      <div class="fl_center">
+        <ul id="categoryList">
+          <!-- <li>
+            <a href="javascript:;">
+              <div class="left"><img src="../images/tj01.png" alt=""></div>
+              <div class="right">
+                <p>派耀 10条装加厚双层抹布 洗碗布
+                </p>
+                <div class="price">￥1999.00</div>
+                <p>
+                  <span>报价(6)</span> <span>评论(2286)</span>
+                </p>
+              </div>
+            </a>
+          </li> -->
+        </ul>
+      </div>
+      <div class="fl_more">
+        <span class="upPage">上一页</span>
+        <select name="" id="selectPage">
+          <!-- <option value="">1/3</option>
+          <option value="">2/3</option>
+          <option value="">3/3</option> -->
+
+        </select>
+        <span class="nextPage">下一页</span>
+      </div>
+    </div>
+  </div>
+
+    <!-- 底部 -->
+  <footer>
+    <div class="foot_tools">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="#"><span></span> 返回顶部</a>
+    </div>
+    <div class="foot_font">
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        <a href="javascript:;">慢慢买手机版</a>
+        -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+<script type="text/template" id="categoryListTmpl">
+  {{each res val}}
+    <li>
+      <a href="./getproduct.html?productid={{val.productId}}">
+        <div class="left">{{@ val.productImg}}</div>
+        <div class="right">
+          <p>{{val.productName}}</p>
+          <div class="price">{{val.productPrice}}</div>
+          <p>
+            <span>{{val.productQuote}}</span> <span>{{val.productCom}}</span>
+          </p>
+        </div>
+      </a>
+    </li>
+  {{/each}}
+</script>
+<script type="text/template" id="selectPageTmpl">
+  <% for(var i = 1; i <= pageNum; i++){ %>
+    <option value="<%= i %>"><%= i %>/<%= pageNum %></option>
+  <% } %>
+</script>
+<!-- 模板引擎 -->
+<script src="../lib/arttemplate/template-web.js"></script>
+<!-- zepto -->
+<script src="../lib/zepto/zepto.js"></script>
+<!-- index.js -->
+<script src="../js/getProductList.js"></script>

@@ -1,0 +1,38 @@
+//第一版：慢慢买手机版初始样式
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+img{
+  width: 100%;
+  //图片清除默认的间隙3px
+  display: block;
+}
+ul{
+  list-style: none;
+}
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+input{
+  border: none;
+  outline: none;
+}
+.clearfix:after{
+  content:"";
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}

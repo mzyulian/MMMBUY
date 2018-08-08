@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买比价网-手机版</title>
+    <link rel="stylesheet" href="../css/base2.css">
+    <link rel="stylesheet" href="../css/baicai.css">
+</head>
+
+<body>
+    <!-- 白菜价页面头部 -->
+    <header>
+        <a class="logo" href="../index.html">
+            <i class="iconfont">&#xe645;</i>
+        </a>
+        <div class="title">
+            <h3>白菜价-淘宝内部卷</h3>
+        </div>
+        <a class="download" href="javascript:;">
+            <!-- <img src="./images/header_app.png" alt="手机app下载"> -->
+        </a>
+    </header>
+
+    <!-- 导航加主体 -->
+    <!-- table栏 -->
+    <div class="bcj-main">
+        <nav>
+            <div class="bcj-nav">
+                <ul class="bcj-nav-bar clearfix">
+                    <!-- <li><a href="javascript:;">全部</a></li>
+                    <li><a href="javascript:;">热销</a></li>
+                    <li><a href="javascript:;">9块邮</a></li>
+                    <li><a href="javascript:;">19块邮</a></li>
+                    <li><a href="javascript:;">数码家电</a></li>
+                    <li><a href="javascript:;">居家</a></li>
+                    <li><a href="javascript:;">美食</a></li>
+                    <li><a href="javascript:;">男装</a></li>
+                    <li><a href="javascript:;">女装</a></li>
+                    <li><a href="javascript:;">鞋包配饰</a></li>
+                    <li><a href="javascript:;">文体</a></li>
+                    <li><a href="javascript:;">母婴</a></li>
+                    <li><a href="javascript:;">美妆</a></li> -->
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 主体内容部分 -->
+        <div class="bcj-connect">
+            <!-- <ul>
+                <li class="bcj-list">
+                    <a href="javascript:;" class="bcj-list-a">
+                        <div class="img">
+                            <img src="./images/9999.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="content">
+                        <div class="i">
+                            <span class="b">[包邮]</span> 双十一红包 今日开启
+                        </div>
+                        <div class="n">
+                            <em>￥</em>0.0
+                            <del>￥0</del>
+                        </div>
+                        <div class="f">
+                            <div class="bar clearfix">
+                                <a href="javascript:;" class="goquan"></a>
+                                <i>
+                                    <em style="width:1%;"></em>
+                                    <span>1%</span>
+                                </i>
+                                <b>已领82张</b>
+                            </div>
+                        </div>
+                        <div class="o">
+                            <a href="javascript:;" target="_blank">
+                                点此领15元优惠券
+                            </a>
+                            <a href="javascript:;" target="_blank">下单链接</a>
+                        </div>
+                    </div>
+                </li>
+            </ul> -->
+        </div>
+    </div>
+
+    <!-- 底部部分开始 -->
+    <footer>
+        <div class="foot_user">
+            <a href="login.html" class="foot_login">登录</a>
+            <a href="register.html" class="foot_register">注册</a>
+            <a href="#" class="foot_return">
+                <i class="iconfont">&#xe795;</i> 返回顶部
+            </a>
+        </div>
+        <div class="foot_text">
+            <div class="text_box">
+                <span class="text_sp">手机APP下载</span>
+                <span class="text_sp">慢慢买手机版</span>
+                <span class="text_sp">--掌上比价平台</span>
+            </div>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 底部部分结束 -->
+
+    <!-- 返回顶部 -->
+    <a class="Gun" id="gotop" href="#">
+        <i class="iconfont">&#xe61c;</i>
+    </a>
+
+</body>
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../lib/zepto/src/touch.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../js/baicai.js"></script>
+<script src="../js/iscroll.js"></script>
+<script src="../js/itcastEvent.js"></script>
+<!-- 滚轮事件监听 -->
+<script>
+    $(function () {
+        scroolTop();
+
+        function scroolTop() {
+            window.onscroll = function () {
+                var scroolTop = document.documentElement.scrollTop || window.pageXOffset || document.body.scrollTop;
+                // console.log(scroolTop);
+                if (scroolTop > 200) {
+                    $("#gotop i").show();
+                } else {
+                    $("#gotop i").hide();
+                }
+            }
+        }
+    })
+</script>
+
+
+<script type="text/template" id="templateBaiList">
+    {{each arr value index}}
+    <li>
+        <a href="javascript:;" class="{{ index == 0 ? 'active' : '' }}" data-titleIdid="{{value.titleId}}">{{value.title}}</a>
+    </li>
+    {{/each}}
+</script>
+
+
+<!--主体内容部分模板 -->
+<script type="text/template" id="listTemp">
+    <ul>
+        {{each list value}}
+        <li class="bcj-list">
+            <a href="javascript:;" class="bcj-list-a">
+                <div class="img">
+                    {{@value.productImg}}
+                </div>
+            </a>
+            <div class="content">
+                <div class="i">
+                    {{@value.productName}}
+                </div>
+                <div class="n">
+                    {{@value.productPrice}}
+                </div>
+                <div class="f">
+                    <div class="bar clearfix">
+                        <a href="javascript:;" class="goquan"></a>
+                        {{@value.productCouponRemain}}
+                    </div>
+                </div>
+                <div class="o">
+                    {{@value.productCoupon}} {{@value.productHref}}
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+
+
+
+</html>

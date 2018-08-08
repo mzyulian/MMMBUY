@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>慢慢买比价网--手机版</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/guonei.css">
+</head>
+<body>
+  <!-- 头部 -->
+  <header>
+    <a href="../index.html" class="logo">慢慢买比价网</a>
+    
+  </header>
+
+<!-- 坑 -->
+<div class="view">
+  <div class="roof">
+    <a href="../index.html"><</a>
+    <p class="zhekou">国内折扣</p>
+    <a href="javascript:;" class="appDown"></a>
+  </div>
+  <div class="hand">
+    <ul>
+        <!-- 站坑 guoneizhekou专用   -->
+     
+    </ul>
+  </div>
+</div>
+  <!-- 底部 -->
+  <footer>
+    <div class="foot_tools">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="#"><span></span> 返回顶部</a>
+    </div>
+    <div class="foot_font">
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        <a href="javascript:;">慢慢买手机版</a>
+        -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+</body>
+<script src="../lib/bootstrap/jquery.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../js/guonei.js"></script>
+<script type="text/template" id="guoneizhekou"> 
+  {{ each data value index }}
+  <li>
+      <a href="guoneizhekou.html?id={{value.productId}}">
+        {{@ value.productImg}}
+        <p class="productName">{{value.productName}}</p>
+        <p class="productPrice">{{value.productPrice}}</p>
+        <p class="productFrom">{{value.productFrom}}</p>
+        <p class="productTime">{{value.productTime}}</p>
+      
+     </a>
+  </li>
+  {{ /each }}
+</script>
+</html>

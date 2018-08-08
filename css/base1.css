@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  img {
+    width: 100%;
+    display: block;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  input {
+    border: none;
+    outline: none;
+  }
+  
+  .clearfix:after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+  }
+  .left{
+    float: left;
+  }
+  .right{
+    float: right;
+  }
+  /*# sourceMappingURL=base.css.map */

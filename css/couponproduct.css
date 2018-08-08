@@ -1,0 +1,134 @@
+header {
+  height: 40px;
+  background-color: #f4483e;
+}
+
+header .container {
+  padding: 0 15px;
+}
+
+header .container .row .al a {
+  color: #fff;
+  font-size: 17px;
+  margin-top: 12px;
+}
+
+header .container .row .title {
+  height: 40px;
+}
+
+header .container .row .title h1 {
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+
+header .container .row .ar {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .container .row .ar a {
+  margin-top: 4px;
+}
+
+header .container .row .ar a img {
+  width: 100%;
+  height: 35px;
+  display: block;
+}
+
+.main .title {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #999999;
+}
+
+.main .info .tpox {
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+}
+
+.main .info .tpox .pic {
+  padding: 0;
+}
+
+.main .info .tpox .pic a img {
+  width: 90%;
+}
+
+.main .info .tpox .tit {
+  padding: 0;
+  color: #333;
+}
+
+.main .info .tpox .tit h3 {
+  font-size: 14px;
+  line-height: 20px;
+  word-break: break-all;
+  margin: 0;
+}
+
+.main .info .tpox .tit p {
+  font-weight: bolder;
+  margin: 0;
+}
+
+.main .info .tpox .tit .time {
+  padding: 10px 0;
+  font-size: 12px;
+  color: #EE7700;
+}
+
+.main .info .tpox .right {
+  padding: 0;
+}
+
+.main .info .tpox .right a {
+  font-size: 20px;
+  color: #999;
+  top: 20px;
+}
+
+.modal {
+  position: absolute;
+}
+
+.modal #mt {
+  width: 50%;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.modal #mt .carousel #left, .modal #mt .carousel #right {
+  display: inline-block;
+  padding: 5%;
+  height: 30%;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.modal #mt .carousel #left {
+  left: -20%;
+}
+
+.modal #mt .carousel #right {
+  right: -20%;
+}
+
+.modal .carousel-inner > .item > img {
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+/*# sourceMappingURL=couponproduct.css.map */

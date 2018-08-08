@@ -1,0 +1,162 @@
+header {
+    height: 40px;
+    background-color: #f4483e;
+    .container {
+        padding: 0 15px;
+        .row {
+            .al {
+                a {
+                    color: #fff;
+                    font-size: 17px;
+                    margin-top: 12px;
+                }
+            }
+            .title {
+                height: 40px;
+                h1 {
+                    line-height: 40px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #fff;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+            .ar {
+                box-sizing: border-box;
+                a {
+                    margin-top: 4px;
+                    img {
+                        width: 100%;
+                        height: 35px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 商品详情
+.list {
+    // 筛选
+    .screen {
+        height: 40px;
+        width: 100%;
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+        border-bottom: 1px solid #ccc;
+        position: relative;
+        .find {
+            ul {
+                padding-left: 40px;
+                li {
+                    height: 40px;
+                    float: left;
+                    width: 28%;
+                    line-height: 40px;
+                    a {
+                        color: #333;
+                        font-size: 18px;
+                        display: inline;
+                    }
+                    span {
+                        font-size: 12px;
+                        margin-top: 12px;
+                        color: #057142;
+                        margin-left: 6px;
+                    }
+                }
+            }
+        }
+        .screen2 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45px;
+            height: 40px;
+            text-align: center;
+            border-left: 1px solid #ccc;
+            span {
+                font-size: 22px;
+                margin-top: 6px;
+            }
+        }
+    }
+    .xl {
+        width: 100%;
+        // background-color: aqua;
+        background-color: #fff;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        display: none;
+        ul {
+            padding: 0;
+            margin-bottom: 0;
+            li {
+                height: 41px;
+                line-height: 40px;
+                padding: 0 10px;
+                border-bottom: 1px dashed #ccc;
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .goods {
+        background-color: #ccc;
+        padding: 6px 0px;
+        ul {
+            width: 98%;
+            li {
+                width: 50%;
+                float: left;
+            }
+            a {
+                display: block;
+                margin: 4px;
+                // padding: 4px; 
+                 background-color: #fff;
+                .img1 {
+                    width: 100%;
+                    height: auto;
+                    text-align: center;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        overflow: hidden;
+                    }
+                }
+                .title {
+                    color: #333;
+                    padding: 0 6px;
+                    height: 14px;
+                    line-height: 14px;
+                    font-weight: normal;
+                    text-align: left;
+                    margin-top: 6px;
+                    font-size: 12px;;
+                    overflow: hidden;
+                }
+                .pic{
+                    padding: 6px;
+                    .price{
+                        float: left;
+                        color: #f8601d;
+                        font-size: 20px;
+                    }
+                    .go{
+                        float: right;
+                        font-size: 14px;
+                        color: #FFFFFF;
+                        border-radius: 3px;
+                        background-color: #ff9501;
+                        padding: 4px 10px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

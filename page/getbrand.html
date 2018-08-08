@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>品牌商品详情</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/getbrand.css">
+  <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css">
+</head>
+<body>
+  <!-- header标签开始 -->
+  <header>
+    <a href="../index.html" class="logo">慢慢买比价网</a>
+    <a href="./moneyctrl.html" class="appDown"></a>
+  </header>
+<!-- header标签结束 -->
+<!-- 搜索框开始 -->
+<div class="search-view clearfix">
+    <div>
+        <input type="text" placeholder="请输入你想比价的商品">
+    </div>
+    <button>搜索</button>
+</div>
+<!-- 搜索框结束 -->
+
+<!-- 首页字符开始 -->
+<div class="pageword">
+    <span>首页&gt;品牌大全&gt;品牌电视哪个好</span>
+</div>
+<!-- 首页字符结束 -->
+
+   <!-- 热门排行字样开始 -->
+   <div class="hotword">
+      <div>品牌电视哪个好</div>
+  </div>
+  <!-- 热门排行字样结束 -->
+
+  <!-- 前十品牌介绍开始 -->
+  <div class="fontbrand">
+      <!-- 占坑专用 -->
+  </div>
+  <!-- 前十品牌开始 -->
+
+  <!-- 销量排行标题开始 -->
+  <div class="sale-volume">
+      <p>平板电视销量排行</p>
+  </div>
+  <!-- 销量排行标题结束 -->
+<!-- 销量排行内容开始 -->
+<div class="sale-details ">
+        <!-- 占位专用 -->
+</div>
+<!-- 销量排行内容结束 -->
+<!-- 评论标题开始 -->
+<div class="commentword">
+  <p>平板电视最有用的用户评论</p>
+</div>
+<!-- 评论标题结束 -->
+<!-- 评论内容开始 -->
+<div class="commentdetail ">
+   <!-- 占位 -->
+</div>
+<!-- 评论内容结束 -->
+<!-- 购物榜单标题开始 -->
+<div class="listword">
+  <p>平板电视好物版单</p>
+</div>
+<!-- 购物榜单结束 -->
+  <!-- footer标签开始 -->
+  <footer>
+    <div class="foot_tools">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="#"><span></span> 返回顶部</a>
+    </div>
+    <div class="foot_font">
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        <a href="javascript:;">慢慢买手机版</a>
+        -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+  <!-- footer标签结束 -->
+</body>
+<script type="text/arttemplate"  id='tenbrand'>
+{{each data value index}}
+<a href="javascript:;" class="fontbrand">
+ <div class="fontbrand-rank">
+  <span class="ranking">{{value.brandId+1}}</span>
+  <div class="fontbrand-recommend">
+      <p>{{value.brandName}}</p>
+      <p>{{value.brandInfo}}}</p>
+  </div>
+  <div class="fontbrand-awesome">
+      <i class="fa fa-chevron-right fa-chevron-right-bu"></i>
+  </div>     
+</div> 
+</a>
+{{/each}}
+</script>
+
+<script type="text/arttemplate"  id="salebrand">
+  {{each data value index}}
+  <a href="javascript:;" class="sale-details">
+      <div class="saledetailsmore">
+          <div>{{@value.productImg}}</div>
+          <div class="saledetails-content">
+            <p>{{value.productName}} </p>
+            <div>
+                <p>{{value.productPrice}}</p>
+                <div class="saledetails-star">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+            </div>        
+            <p>{{value.productQuote}}</p>
+            <p>{{value.productCom}}</p>        
+          </div>    
+          </div>
+        </a>
+  {{/each}}
+</script>
+
+<script type="text/arttemplate"  id="commentmore">
+  {{each arr value index}}
+  <a href="javascript:;" class="commentdetail ">
+   <div class="commentbox clearfix">
+      <a class="commentdetail-img">
+          <img src="http://pro.zuyushop.com:8015/ProPic/201510/Thumb/Thumb_201510001104382491.jpg" alt="">
+      </a>
+      <div class="commentdetail-word"><a>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</a>
+      </div>
+   </div>
+   <a href="javascript:;" class="commentmain clearfix">
+     <div class="commentmain-top">
+        <div class="userstar">{{value.comName}}:
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+          <div class="userdate">{{value.comTime}}</div>
+     </div>
+      <div class="usermain">
+          {{value.comContent}}
+     </div>    
+   </a>
+</a>
+{{/each}}
+</script>
+<script  src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../js/getbrand.js"></script>
+<script src="../js/getbrand-title.js"></script>
+</html>

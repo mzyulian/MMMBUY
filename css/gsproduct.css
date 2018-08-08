@@ -1,0 +1,179 @@
+header {
+  height: 40px;
+  background-color: #f4483e;
+}
+
+header .container {
+  padding: 0 15px;
+}
+
+header .container .row .al a {
+  color: #fff;
+  font-size: 17px;
+  margin-top: 12px;
+}
+
+header .container .row .title {
+  height: 40px;
+}
+
+header .container .row .title h1 {
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+
+header .container .row .ar {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .container .row .ar a {
+  margin-top: 4px;
+}
+
+header .container .row .ar a img {
+  width: 100%;
+  height: 35px;
+  display: block;
+}
+
+.list .screen {
+  height: 40px;
+  width: 100%;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.list .screen .find ul {
+  padding-left: 40px;
+}
+
+.list .screen .find ul li {
+  height: 40px;
+  float: left;
+  width: 28%;
+  line-height: 40px;
+}
+
+.list .screen .find ul li a {
+  color: #333;
+  font-size: 18px;
+  display: inline;
+}
+
+.list .screen .find ul li span {
+  font-size: 12px;
+  margin-top: 12px;
+  color: #057142;
+  margin-left: 6px;
+}
+
+.list .screen .screen2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 40px;
+  text-align: center;
+  border-left: 1px solid #ccc;
+}
+
+.list .screen .screen2 span {
+  font-size: 22px;
+  margin-top: 6px;
+}
+
+.list .xl {
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  display: none;
+}
+
+.list .xl ul {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.list .xl ul li {
+  height: 41px;
+  line-height: 40px;
+  padding: 0 10px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.list .xl ul li a {
+  font-size: 16px;
+}
+
+.list .goods {
+  background-color: #ccc;
+  padding: 6px 0px;
+}
+
+.list .goods ul {
+  width: 98%;
+}
+
+.list .goods ul li {
+  width: 50%;
+  float: left;
+}
+
+.list .goods ul a {
+  display: block;
+  margin: 4px;
+  background-color: #fff;
+}
+
+.list .goods ul a .img1 {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.list .goods ul a .img1 img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.list .goods ul a .title {
+  color: #333;
+  padding: 0 6px;
+  height: 14px;
+  line-height: 14px;
+  font-weight: normal;
+  text-align: left;
+  margin-top: 6px;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.list .goods ul a .pic {
+  padding: 6px;
+}
+
+.list .goods ul a .pic .price {
+  float: left;
+  color: #f8601d;
+  font-size: 20px;
+}
+
+.list .goods ul a .pic .go {
+  float: right;
+  font-size: 14px;
+  color: #FFFFFF;
+  border-radius: 3px;
+  background-color: #ff9501;
+  padding: 4px 10px;
+  text-decoration: none;
+}
+/*# sourceMappingURL=gsproduct.css.map */

@@ -1,0 +1,345 @@
+//header标签开始
+header {
+  height: 51px;
+  background-color: #ff841d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 17px;
+  padding-right: 8px;
+  .logo {
+    width: 185px;
+    height: 25px;
+    text-indent: -9999px;
+    background-image: url("../images/header_logo.png");
+    background-size: 185px 25px;
+    background-repeat: no-repeat;
+  }
+  .appDown {
+    width: 34px;
+    height: 34px;
+    background-image: url("../images/header_app.png");
+    background-repeat: no-repeat;
+    background-size: 34px 34px;
+  }
+}
+
+// header标签结束
+// 搜索框开始
+.search-view {
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  div {
+    width: 100%;
+    input {
+      width: 90%;
+      height: 30px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background-color: #f1f1f1;
+      border-radius: 12px;
+      padding-left: 5%;
+      margin-left: 2%;
+      font-size: 16px;
+    }
+  }
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    background-color: #ff841d;
+    padding: 5px 14px;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 16px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+}
+
+// 搜索框结束
+// 首页字符开始
+.pageword {
+  height: 36px;
+  border-top: 2px solid #e6e6e6;
+  border-bottom: 2px solid #e6e6e6;
+  background-color: #f4f4f4;
+  span {
+    font-size: 14px;
+    line-height: 36px;
+    padding-left: 6px;
+    color: #666;
+  }
+}
+
+// 首页字符结束
+// 热门排行字样开始
+.hotword {
+  width: 100%;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  div {
+    width: 97%;
+    height: 40px;
+    font-size: 16px;
+    color: #874604;
+    margin: 0px 10px;
+    line-height: 40px;
+    padding-left: 8px;
+    font-weight: 700;
+  }
+}
+
+// 热门排行字样结束
+//前十品牌开始
+.fontbrand {
+  width: 100%;
+  .fontbrand-rank {
+    display: flex;
+    height: 62px;
+    border-bottom: 1px solid #3c3c3c;
+    .ranking {
+      width: 20px;
+      height: 20px;
+      color: #fff;
+      background-color: #ccc;
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;
+      float: left;
+      margin: 10px 0px 0px 10px;     
+    }
+    .fontbrand-recommend {
+      flex: 1;
+      float: left;
+      width: 80%;
+      height: 60px;
+      p:nth-child(1) {
+        font-size: 16px;
+        padding-top: 10px;
+        padding-left: 10px;
+      }
+      p:nth-child(2) {
+        font-size: 12px;
+        padding-top: 2px;
+        padding-left: 10px;
+        color: #ccc;
+      }
+    }
+    .fontbrand-awesome {
+      float: right;
+      padding-top: 16px;
+      padding-right: 4px;
+    }
+   
+  }
+}
+.fontbrand:nth-of-type(1) {
+   span{
+     background-color: red !important;
+   }
+}
+.fontbrand:nth-of-type(2) {
+  span{
+    background-color: orange !important;
+  }
+}
+.fontbrand:nth-of-type(3) {
+  span{
+    background-color: green !important;
+  }
+}
+
+//前十品牌结束 
+// 销量排行开始
+.sale-volume {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #c8c8c8;
+  p {
+    font-size: 16px;
+    padding: 10px 0px 10px 10px;
+    color: #874604;
+  }
+}
+
+// 销量排行结束
+// 销量排行内容开始
+.sale-details {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  .saledetailsmore {
+    display: flex;
+    img {
+      width: 100px;
+      height: 100%;
+      padding-left:10px;
+    }
+    .saledetails-content {
+      position: relative;
+      flex: 1;
+      margin-left: 8px;
+      >p:nth-child(1) {
+        margin-top: 14px;
+        font-size: 14px;
+      }
+      >div {
+        display: flex;
+        justify-content: space-between;
+      }
+      div>p {
+        display: inline-block;
+        margin-top: 16px;
+        color: #ea3900;
+        font-weight: 700;
+      }
+      >p:nth-child(3) {
+        color: #ccc;
+        font-size: 12px;
+        display: inline-block;
+      }
+      >p:nth-child(4) {
+        color: #ccc;
+        font-size: 12px;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+    }
+    .saledetails-star {
+      display: inline-block;
+      padding-top: 5px;
+      i {
+        color: gold;
+      }
+    }
+  }
+}
+
+//销量排行内容结束 
+// 评论标题开始
+.commentword {
+  width: 100%;
+  height: 35px;
+  border-bottom: 1px solid #c8c8c8;
+  background-color: #f3f3f3;
+  line-height: 35px;
+  font-size: 14px;
+  >p {
+    color: #874604;
+    padding-left: 10px;
+    font-weight: 700;
+  }
+}
+
+// 评论开始结束
+// 评论内容开始
+.commentdetail {
+  width: 100%;
+  background-color: #f2f2f2;
+  .commentdetail-img {
+    float:left;
+    padding: 10px 10px 10px 10px;
+    img {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      background-color: pink;
+    }
+  }
+  .commentdetail-word {
+    float:left;
+    margin-top: 10px;
+    color: #999999;
+    font-size: 14px;
+  }
+  .commentmain {
+    border: 1px solid #ccc;
+    margin: 10px 10px 0px 10px;
+    padding: 10px 6px 6px 6px;
+    background-color: #f8f8f8;
+    .commentmain-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      .userstar {
+        color: #987c00;
+        font-size: 14px;
+        i {
+          color: yellow;
+        }
+      }
+      .userdate {
+        font-size: 14px;
+        color: #ccc;
+      }
+    }
+  }
+}
+
+// 评论内容结束
+// 购物榜单标题开始
+.listword {
+  width: 100%;
+  height: 56px;
+  background-color: #f2f2f2;
+  >p {
+    line-height: 56px;
+    color: #3c3c3c;
+  }
+}
+
+// 购物版单标题结束
+// foot标签开始
+footer {
+  background-color: #efefef;
+  color: #5a5a5a;
+  .foot_tools {
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    display: flex;
+    a {
+      height: 34px;
+      font-size: 14px;
+      border-right: 1px solid #c4c4c4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    a:nth-child(-n+2) {
+      flex: 3;
+    }
+    a:last-child {
+      flex: 4;
+      border-right: none;
+      span {
+        width: 15px;
+        height: 15px;
+        margin-right: 2px;
+        margin-bottom: 4px;
+        background-image: url("../images/top.jpg");
+        background-size: 15px 15px;
+      }
+    }
+  }
+  .foot_font {
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+    height: 60px;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px;
+    color: #666;
+    p {
+      a:first-child {
+        color: red;
+      }
+      a {
+        display: inline;
+      }
+    }
+  }
+}
+
+// foot标签结束
